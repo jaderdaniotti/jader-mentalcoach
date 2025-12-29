@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Normal scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom coaching color palette */
+@layer utilities {
+  .text-gold-500 {
+    color: #d4af37;
+  }
+  .bg-gold-500 {
+    background-color: #d4af37;
+  }
+  .border-gold-500 {
+    border-color: #d4af37;
+  }
+  .from-gold-500 {
+    --tw-gradient-from: #d4af37;
+  }
+  .to-gold-500 {
+    --tw-gradient-to: #d4af37;
+  }
+}
+
+/* Professional glassmorphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(229, 231, 235, 0.5);
+}
+
+/* Professional hover effects */
+@layer components {
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+  
+  .button-primary {
+    @apply bg-purple-700 text-white px-8 py-4 rounded-full font-semibold hover:bg-purple-800 transition-all duration-300 transform hover:scale-105 shadow-lg;
+  }
+  
+  .button-secondary {
+    @apply border-2 border-purple-700 text-purple-700 px-8 py-4 rounded-full font-semibold hover:bg-purple-700 hover:text-white transition-all duration-300;
+  }
+}
+
+/* Typography enhancements */
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+  
+  body {
+    @apply font-sans antialiased;
+  }
+}
+
+/* Form styling */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  ring: 2px;
+}
+
+/* Smooth transitions for all interactive elements */
+a, button {
+  @apply transition-all duration-300;
+}
+
+
